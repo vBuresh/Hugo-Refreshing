@@ -3,10 +3,10 @@ b6_*/
 *_b6
 /exapmleSite
 /resources
-# /static/fonts
-# /images
+/static/fonts
+/images
 .zip
 .hugo_build.lock
-*wReadme
+*Readme.md
 *~
 *.swp
