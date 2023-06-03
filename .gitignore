@@ -1,12 +1,15 @@
 .vscode
 b6_*/
 *_b6
-/exapmleSite
+/exapmleSite/
 /resources
 /static/fonts
 /images
 .zip
 .hugo_build.lock
-*Readme.md
+*wReadme.md
 *~
 *.swp
+# exampleSite/assets/
+# exampleSite/theme-ananke.toml
+
