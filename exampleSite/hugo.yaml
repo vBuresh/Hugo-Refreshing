@@ -1,0 +1,156 @@
+# Configure Hugo:       https://gohugo.io/getting-started/configuration/#configuration-file
+title: cyberMir
+baseURL: https://cybmir.ru/
+theme: hugo-refreshing
+# theme: Hugo-Refreshing_v3
+# theme: hugo-rfi-cover
+
+languageCode: ru
+DefaultContentLanguage: ru
+disableLanguages: en
+# languageCode:           en
+# DefaultContentLanguage: en
+# disableLanguages:       ru
+
+enableInlineShortcodes: true
+
+# bd5
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+# Syntax Highlighting
+pygmentsUseClasses: true
+
+enableRobotsTXT: false
+publishDir: "@site_^_cybMiP"
+
+# применяются относительные ссылки. Тo turn relative URLs into absolute use
+# canonifyURLs:         true.
+canonifyURLs: false
+
+params:
+  # Brand
+  # logo:               "/images/logo_vvburesh.svg"
+  logo: /images/cybermir-logo.svg
+  #title:                lux
+  description: A one-page template for building simple and beautiful home pages.
+  # for meta
+  summary: Very nice template
+  authors: "@wburesh"
+  site_version: a4.0
+  favicon: /images/favicon.svg
+
+  # Баннер для карточек
+  defaultImage: /images/plaseholder-rfi.svg
+  # Оptions
+
+  darkMode: true
+  # darkMode:           false
+
+  cssMinify: false
+  cssIntegrity: false
+  jsMinify: false
+  jsIntegrity: false
+
+  # option to specify the main colour of the theme
+
+  # mainColour:         "#F39200"
+  # mainColour:         "#00d1b2"
+  mainColour: "#33ccff"
+  # bs $primary, $secondary, $success, $warning, $light
+  # mainColour:         "#0d6efd"
+  # mainColour:         "#6c757d"
+  # mainColour:         "#198754"
+  # mainColour:         "#fd9c0d"
+  # mainColour:         "#f8f9fa"
+
+  # homepage options
+  homepage:
+    # this options let you specify if you want a link to the homepage
+    # it can be:        "none", "menu", "footer" or "menu+footer"
+    # linkPosition:     "footer"
+    # this options let you specify the text of the link to the homepage
+    # linkText:         "Homepage"
+    # option to specify the title in the homepage
+    title: CyberМїРъ
+    subtitle: Only one-page template for building simple and beautiful home pages.
+    # option to specify the subtitle in the homepage
+    summary: Download, edit the text, and add your own fullscreen background photo to make it your own.
+
+## multi language support options
+####################################
+languages:
+  en:
+    languageName: English
+    weight: 2
+    # title:            In English
+  ru:
+    languageName: Russian
+    # title:            На Русском
+    weight:
+      1
+      # Some sub-parameters of the "Homepage" and "footer" parameter
+    params:
+      homepage:
+        title: CyberМїРъ — тема Освежающая
+        # subtitle: '— с освежающей темой'
+        summary: "Известно, что «кибер» — слово-приставка, связывающая многое понятия с компьютерами и интернетом. Происходит оно от греческой «кибернетики» Так называли науку об управлении и передаче информации среди людей и машин."
+      navsidebar:
+        link: about-project
+        title: О проекте
+      footer:
+        logo: /images/cybmir-logo.svg
+        # title: 'cyberМїРъ'
+        # option to specify the copyright in the footer
+        # TODO См. https://gohugo.io/functions/safehtml/#prose
+        # copyright: © 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
+        # {{ .Site.Copyright | safeHTML }} in a template would then output
+        # option to specify the copyright in the footer
+        license:
+          link: by-sa/4.0
+          title: CC BY-SA 4.0
+        contactAdr: "Москва, Россия"
+        contactTel: +7-905-702-04-50
+        email:
+          link: wburesh@vk.com
+          title: e-mail
+        # **uncomment** the below lines to show in footer
+        # option to specify your telegram username in the footer;
+        telegram:
+          link: +H9pM_vvPjVIzNmMy
+          title: Telegram
+        # option to specify your VK username in the footer;
+        VK:
+          link: wburesh
+          title: ВКонтакте
+        # **uncomment** the below lines to show in footer
+        github:
+          link: vBuresh/Hugo-ReFreshing
+          title: Github
+        # option to specify your gitlab account in the footer;
+        # gitlab:
+        #   link: username
+        #   title: Gitlab
+        # option to specify your WhatsApp username in the footer;
+        # whatsapp:
+        #   link: +7-905-000-00-00
+        #   title: WhatsApp
+        # option to specify your facebook account in the footer;
+        # facebook:
+        #   link: your.username
+        #   title: Facebook
+        # option to specify your twitter username in the footer;
+        # twitter:
+        #    link: username
+        #    title: Twitter
+        # option to specify your instagram username in the footer;
+        # instagram:
+        #    link: username
+        #    title: Instagram
