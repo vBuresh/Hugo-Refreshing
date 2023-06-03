@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{- partial "meta.html" . -}}
+
+  <title>{{- block "title" . -}}
+    {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title |
+    markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+    {{- end -}}</title>
+
+  {{- partial "stylesheets.html" . -}}
+  {{- partial "favicons.html" . -}}
+  {{- partial "yaMetrics.html" . -}}
+
+</head>
+
+{{ block "body_override" . }}
+
+<body>{{ end }}
+  {{ if .Site.Params.darkMode -}}
+  {{- partial "darkmode-js-subbody.html" . -}}
+  {{- end }}
+  <div class="d-flex mx-auto flex-column">
+    <div class="px-2 pt-2">
+      {{- partial "navbar/sidebar-floating-btn.html" . -}}
+      {{- partial "navbar/navbaroff.html" . -}}
+			<!-- TODO: Добавить класс .rfi-page - -->
+      <div id="content" class="container cover-container pb-5">
+        <main>{{- block "main" . }}
+          {{- end }}</main>
+      </div>
+    </div>
+    {{- partial "footer.html" . -}}
+    {{- partial "navbar/sidebar-offconvas.html" . -}}
+    {{- partial "scripts.html" . -}}
+  </div>
+</body>
+
+</html>

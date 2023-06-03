@@ -1,0 +1,15 @@
+<!-- TODO: доработать шорткод и/или аббревиатуру 
+<sup class="text-info">[1](#fn_1)</sup>
+<span id="fn_1" class="text-danger">1.</span>
+{{- /* Usage
+<sup class="text-info">[1](#fn_1)</sup>
+< footerList >
+<a id="fn_1" href="#" class="list-group-item list-group-item-action border-0" aria-current="true">
+    «ктоЧто». [где, 2023-05-27](/)
+< /footerList >
+*/ -}}
+.footerlist {  }
+-->
+<div class="list-group">
+  {{ .Inner | markdownify }}
+</div>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="rfi-gallerylist">
+  <header class="listpage-title">
+    <h1>{{.Title}}</h1>
+  </header>
+  <div class="divider"></div>
+  <div class="row row-cols-1">
+    {{- $pagesEachPage := 4 -}}
+    <div class="col">
+      {{- range $index, $element := .Pages -}}
+      {{- if eq (mod $index $pagesEachPage) 0 -}}
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 g-lg-3 mt-0">
+      {{- end -}}
+      {{- partial "tags/summary.html" . -}}
+      {{- end -}}
+    </div>
+</section>
+{{ end }}
+

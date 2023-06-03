@@ -1,0 +1,10 @@
+{{/* Usage
+ {{< /leafDay >}}
+среда
+{{< /leafDay >}}
+*/}}
+
+<div class="mb-2">
+  {{ partial "svg/leafday.svg" (dict "class" "d-inline-block" "width" "36" "height" "36") }}
+  {{ .Inner  | markdownify }}
+</div>

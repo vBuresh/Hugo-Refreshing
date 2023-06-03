@@ -1,1 +1,12 @@
-b6_*
+.vscode
+b6_*/
+*_b6
+/exapmleSite
+/resources
+# /static/fonts
+# /images
+.zip
+.hugo_build.lock
+*wReadme
+*~
+*.swp

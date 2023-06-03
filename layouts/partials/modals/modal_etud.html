@@ -1,0 +1,53 @@
+  <!-- Button trigger modal -->
+  <div class="mb-3">
+    <a class="btn btn-link" href="#modal_etud" role="button" data-bs-toggle="modal" data-bs-target="#modal_etud">
+      <img src="images/13.jpg" width="100%" alt="...">
+    </a>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal_etud" tabindex="-1" aria-labelledby="modal_etudLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-light">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal_etudLabel">Все-таки она вертится</h1> &nbsp;
+          <button type="button" class="btn btn-link" data-bs-dismiss="modal" aria-label="Close">
+            <svg id="layout-sidebar-inset" width="1.1em" height="1.1em" fill="{{ .Site.Params.mainColour }}" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+              </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselModal_etudControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/10.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/12.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/13.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal_etudControls"
+              data-bs-slide="prev">
+              <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+                <path
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
+                  <svg>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselModal_etudControls"
+              data-bs-slide="next">
+              <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+                <path
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                  <svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-light" href="/cmir/" role="button">Смотреть все</a>
+        </div>
+      </div>
+    </div>
+  </div>
