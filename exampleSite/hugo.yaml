@@ -1,13 +1,12 @@
 # Configure Hugo:       https://gohugo.io/getting-started/configuration/#configuration-file
 title: cyberMir
 baseURL: https://cybmir.ru/
-theme: hugo-refreshing
-# theme: Hugo-Refreshing_v3
-# theme: hugo-rfi-cover
+theme: refreshing
 
 languageCode: ru
 DefaultContentLanguage: ru
-disableLanguages: en
+disableLanguages:
+  - en
 # languageCode:           en
 # DefaultContentLanguage: en
 # disableLanguages:       ru
@@ -38,7 +37,7 @@ canonifyURLs: false
 params:
   # Brand
   # logo:               "/images/logo_vvburesh.svg"
-  logo: /images/cybermir-logo.svg
+  logo: /images/logoRFI.svg
   #title:                lux
   description: A one-page template for building simple and beautiful home pages.
   # for meta
@@ -106,7 +105,7 @@ languages:
         link: about-project
         title: О проекте
       footer:
-        logo: /images/cybmir-logo.svg
+        logo: /images/logoRFI.svg
         # title: 'cyberМїРъ'
         # option to specify the copyright in the footer
         # TODO См. https://gohugo.io/functions/safehtml/#prose
