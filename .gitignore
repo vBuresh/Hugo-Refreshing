@@ -1,14 +1,13 @@
 .vscode
+resources/
+.hugo_build.lock
+public/
 b6_*/
 *_b6
-/resources
-/static/fonts
-/images
+static/fonts/
 .zip
-.hugo_build.lock
 *wReadme.md
 *~
 *.swp
 # exampleSite/assets/
 # exampleSite/theme-ananke.toml
-
