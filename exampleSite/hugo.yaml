@@ -49,10 +49,7 @@ params:
   # Баннер для карточек
   defaultImage: /images/plaseholder-rfi.svg
   # Оptions
-
-  darkMode: true
-  # darkMode:           false
-
+  
   cssMinify: false
   cssIntegrity: false
   jsMinify: false

@@ -18,10 +18,7 @@
 {{ block "body_override" . }}
 
 <body>{{ end }}
-  {{ if .Site.Params.darkMode -}}
-  {{- partial "darkmode-js-subbody.html" . -}}
-  {{- end }}
-  <div class="d-flex mx-auto flex-column">
+   <div class="d-flex mx-auto flex-column">
     <div class="px-2 pt-2">
       {{- partial "navbar/sidebar-floating-btn.html" . -}}
       {{- partial "navbar/navbaroff.html" . -}}
