@@ -1,0 +1,5 @@
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="{{ .fill }}" width="{{ .width }}" height="{{ .height }}" viewBox="0 0 128 128" aria-label="External Link"> 
+    <path d="M.299 114.909l6.792 5.61 31.81-25.287z"/>
+  <path d="M48.948 89.172c67.399-61.229 73.492-77.218 73.492-77.218-8.448 29.321-7.254 83.267-73.492 77.218z"/>
+  <path d="M44.56 89.365c75.756-68.062 77.88-77.41 77.88-77.41C81.65 53.14 6.805 39.138 44.56 89.364z"/>
+</svg>
