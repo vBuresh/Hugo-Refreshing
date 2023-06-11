@@ -11,4 +11,7 @@
     </a>
     {{ end }}
   </li>
+  {{ with .Site.Params.colormode }} 
+  {{ partial "navbar/colormode-btn.html" . }}
+  {{ end }}
 </ul>

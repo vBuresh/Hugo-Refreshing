@@ -43,10 +43,11 @@ params:
   # for meta
   summary: Very nice template
   authors: "@wburesh"
-  site_version: a4.0
+  site_version: b2.0
   favicon: /images/favicon.svg
-
-  # Баннер для карточек
+  # Переключатель цветовых схем (в правом меню) 
+  colormode: true
+  # Изображение для карточек списков
   defaultImage: /images/plaseholder-rfi.svg
   # Оptions
   
