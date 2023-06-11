@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" data-bs-theme="auto">
 
 <head>
   {{- partial "meta.html" . -}}
@@ -9,28 +9,27 @@
     markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
     {{- end -}}</title>
 
-  {{- partial "stylesheets.html" . -}}
-  {{- partial "favicons.html" . -}}
-  {{/*- partial "yaMetrics.html" . -*/}}
+  {{ partial "stylesheets" . }}
+  {{ partial "favicons" . }}
+  {{ partial "icons" . }}
+  {{/* partial "yaMetrics" . */}}
 
 </head>
 
-{{ block "body_override" . }}
-
-<body>{{ end }}
+{{ block "body_override" . }}<body>{{ end }}
    <div class="d-flex mx-auto flex-column">
     <div class="px-2 pt-2">
-      {{- partial "navbar/sidebar-floating-btn.html" . -}}
-      {{- partial "navbar/navbaroff.html" . -}}
+      {{ partial "navbar/sidebar-floating-btn.html" . }}
+      {{ partial "navbar/navbaroff.html" . }}
       <!-- TODO: Добавить класс .rfi-page - -->
       <div id="content" class="container cover-container pb-5">
-        <main>{{- block "main" . }}
-          {{- end }}</main>
+        <main>{{ block "main" . }}
+          {{ end }}</main>
       </div>
     </div>
-    {{- partial "footer.html" . -}}
-    {{- partial "navbar/sidebar-offconvas.html" . -}}
-    {{- partial "scripts.html" . -}}
+    {{ partial "footer" . }}
+    {{ partial "navbar/sidebar-offconvas" . }}
+    {{ partial "scripts" . }}
   </div>
 </body>
 
