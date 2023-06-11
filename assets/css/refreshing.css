@@ -42,6 +42,14 @@
   background: var(--bs-gray-800);
 }
 
+/*
+ * BS icons 
+ */
+.bi {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* 
 * Fonts
 */
@@ -723,6 +731,7 @@ pre,
 
 /* RFI-cover */
 
+
 .cover-container {
   max-width: 72rem;
   /* min-width: 32rem; */
@@ -819,7 +828,7 @@ pre,
 .sidebar-floating-btn {
   position:fixed;
   right: 10px;
-  top: 1.5em;
+  top: .75em;
   z-index: 178;
 }
 
