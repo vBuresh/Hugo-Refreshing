@@ -22,3 +22,7 @@
 {{ with .Params.robots -}}
 <meta name="robots" content="{{ . }}">
 {{- end }}
+
+{{- $colorModeJS := printf "/js/color-modes.js" -}}
+<script src="{{ $colorModeJS | relURL }}"></script>
+
