@@ -1,13 +1,17 @@
+## Vim, IDEs
 .vscode
+*~
+*.swp
+## Bootstrap
+# assets/bootstrap/scss/
 resources/
 .hugo_build.lock
 public/
-b6_*/
-*_b6
+## ReFreshing
 static/fonts/
+b6_*
+*_b6
 .zip
 *wReadme.md
-*~
-*.swp
 # exampleSite/assets/
 # exampleSite/theme-ananke.toml
