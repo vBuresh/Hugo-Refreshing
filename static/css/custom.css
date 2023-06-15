@@ -1,0 +1,16 @@
+/* Стили пользователя */
+/* Настройка черты над меню 
+.navtopline {
+  background: var(--rfi-veryDarkBlue);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 82, 113, 1) 0%,
+    rgba(33, 82, 113, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 50px;
+  height: 2px;
+  margin-bottom: -3px;
+  width: 128px;
+}
+*/

@@ -1,13 +1,11 @@
-{{- $sass      := "style.sass" -}}
-{{- $scss      := "style.scss" -}}
 {{- $cssTarget := "css/style.css" -}}
 
 {{- $cssOpts   := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") -}}
 
-{{- $css  := resources.Get $sass | resources.ExecuteAsTemplate $scss . | toCSS $cssOpts -}}
-{{- $css1 := resources.Get "css/bootstrap.css" -}}
-{{- $css2 := resources.Get "css/refreshing.css" -}}
-{{- $css3 := resources.Get "css/custom.css" -}}
+{{- $css  := resources.Get "css/bootstrap.css" -}}
+{{- $css1 := resources.Get "css/bs-refreshing.css" -}}
+{{- $css2 := resources.Get "css/bundle-rfi.css" -}}
+{{- $css3 := resources.Get "css/refreshing.css" -}}
 
 {{- if .Site.Params.cssMinify -}}
 
@@ -41,4 +39,9 @@
 <link rel="stylesheet" type="text/css" href="{{- $css1.Permalink | relURL -}}">
 <link rel="stylesheet" type="text/css" href="{{- $css2.Permalink | relURL -}}">
 <link rel="stylesheet" type="text/css" href="{{- $css3.Permalink | relURL -}}">
+{{- end -}}
+
+<!-- В настройках - включить (true/false) пользовательские стили  -->
+{{- if .Site.Params.customCSS -}}
+<link rel="stylesheet" type="text/css" href="{{ "css/custom.css" | relURL }}">
 {{- end -}}
