@@ -1,5 +1,6 @@
 /*? Bootstrap v5.3.0 - кастомизация v004 см.также [@import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) */
-:root {
+:root,
+[data-bs-theme="light"] {
   --bs-font-sans-serif: 'Golos Text VF', 'Golos UI VF', system-ui, -apple-system,
     'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
@@ -7,175 +8,27 @@
   --bs-font-monospace: 'Fira Code VF', SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
   /*rfi Theme variables */
-
   --mainColour: var(--rfi-color);
   --rfi-veryDarkBlue: #0b0b0d;
   /* --rfi-veryDarkBlackBlue1: #1d2026; 
   --rfi-veryDarkBlackBlue2: #121417; */
-  --rfi-VeryDarkBlueFooter: #102736;
-  --rfi-darkHugoBlue: #132029;
-  --rfi-darkHugo: #0a1922;
-  --rfi-logoDarkText: #215271;
-  --rfi-verydarkHugo: #040b0e;
-  --rfi-blackDakmode: #111;
   --rfi-color: #33ccff;
   --rfi-aHover: #0a58ca;
   --rfi-aLinks: var(--mainColour);
-  --bd-info: var(--rfi-color);
-  --bd-success: #33ffcc;
-  --bd-warning: #ffcc33;
-  --bd-danger: #cc0066;
-  --bd-secondary: var(--bs-gray-500);
-  --chroma-comment: #75715e;
+  --rfi-logoDarkText: #215271;
+  --rfi-darkHugo: #0a1922;
+  --rfi-VeryDarkBlueFooter: #102736;
+  --rfi-darkHugoBlue: #132029;
 }
 
-*::-webkit-scrollbar {
-  width: 5px;
-  height: 7px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--bs-gray-600);
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--bs-gray-800);
-}
-
-/*
- * BS icons 
- */
-.bi {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-/* Bootstrap customization  */
-
-.badge {
-  background-color: var(--mainColour);
-  color: var(--rfi-darkHugo);
-}
-
-/* bs-6074 */
-.offcanvas-body {
-  text-align: left;
-}
-
-/* Typography */
-a {
-  color: var(--bs-primary);
-  /* color: var(--rfi-aLinks); */
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--rfi-aHover);
-  /* color: var(--mainColour); */
-  text-decoration: none;
-}
-
-/* Изображения */
-
-/*
-themes/hugo-refreshing/layouts/partials/topBanner.html
-themes/hugo-refreshing/layouts/partials/topPageimg.html
-layouts/partials/artGallery.html
-layouts/partials/artGallery-List.html
-.rfi-topbanner
-.rfi-toppageimg
-.rfi-artgallery
-.rfi-artgallery-list
-
-*/
-
-.rfi-toppageimg .figure {
-  max-height: 850px;
-}
-.figure-caption {
-  font-size: 0.875em;
-  color: var(--bs-gray-600); 
-}
-figcaption {
-  font-size: 1em;
-  color: var(--bs-gray-600);
-  text-align: right;
-  font-style: italic;
-  margin-right: .5rem;
-  margin-top: .5rem;
-}
-
-figcaption p {
-  margin-top: .5rem;
-}
-
-table {
-  color: var(--bs-table-color);
-  border-color: var(--bs-table-border-color);
-  margin-bottom: 1rem;
-  width: 100%;
-  vertical-align: top;
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: var(--bs-table-striped-bg) !important;
-  color: var(--bs-table-color);
-  border-color: var(--bs-table-border-color);
-}
-
-td {
-  border-bottom: 1px solid var(--bs-gray-300);
-  line-height: 2rem;
-}
-
-.lntable td {
-  line-height: 1.32rem;
-  font-size: 1.125em;
-}
-
-/* Callouts */
-blockquote,
-.bquote,
-.bd-callout {
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0 solid var(--bs-gray-100);
-  border-left-width: 0.2rem;
+[data-bs-theme="dark"] {
+  --rfi-verydarkHugo: #040b0e;
+  --rfi-blackDakmode: #111;
 }
 
 blockquote {
-  border-left-width: 0
-}
-
-blockquote h4,
-.bquote h4,
-.bd-callout h4 {
-  margin-bottom: 0.25rem;
-}
-
-blockquote p,
-.bquote p,
-.bd-callout p:last-child {
-  margin-bottom: 0;
-}
-
-/*
- blockquote code,
-.bquote code,
-.bd-callout code {
-  @include border-radius();
-} */
-
-blockquote + .bd-callout,
-.bquote + .bd-callout,
-.bd-callout + .bd-callout {
-  margin-top: -0.25rem;
-}
-
-blockquote {
-  background-color: var(--bs-gray-100);
-  /* margin-left: 4rem; */
+  /* background-color: var(--bs-gray-100);
+  margin-left: 4rem; */
   background-image: url("data:image/svg+xml,<svg viewBox='0 -7 50 50' fill='%23adb5bd' xmlns='http://www.w3.org/2000/svg'><path d='M26.872 15.838c-5.576 1.496-9.114 4.608-10.613 9.276 1.38-2.155 3.358-3.232 5.936-3.232 1.979 0 3.598.658 4.977 1.975 1.319 1.316 2.039 2.992 2.039 4.967 0 1.915-.66 3.471-1.979 4.787-1.32 1.317-3.058 1.915-5.217 1.915-2.218 0-3.897-.718-5.157-2.094C15.6 31.995 15 30.08 15 27.627 15 21.224 18.898 16.974 26.752 15zm15.79 0c-5.576 1.496-9.114 4.608-10.613 9.276 1.379-2.155 3.357-3.232 5.936-3.232 1.978 0 3.597.658 4.977 1.975C44.28 25.173 45 26.85 45 28.824c0 1.915-.66 3.471-1.978 4.787-1.32 1.317-3.059 1.915-5.217 1.915-2.219 0-3.898-.718-5.157-2.094-1.259-1.437-1.859-3.351-1.859-5.805 0-6.403 3.898-10.653 11.753-12.627z'/></svg>");
   background-repeat: no-repeat;
   background-size: 2.2rem 2.2rem;
@@ -200,113 +53,34 @@ blockquote i::before {
   content: '— ';
 }
 
-.bd-callout i {
-  display: block;
-  color: var(--bs-gray-600);
-  font-size: 0.875em;
-  text-align: right !important;
-  margin-top: 0.5em !important;
-  margin-bottom: -1rem;
+.navtopline {
+  background: var(--rfi-veryDarkBlue);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 82, 113, 1) 0%,
+    rgba(33, 82, 113, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 50px;
+  height: 2px;
+  margin-bottom: -3px;
+  width: 128px;
 }
-
-.bd-callout i::before {
-  content: '— ';
-}
-
-.bquote blockquote {
-  background-image: none;
-  border: 0;
-  padding: 0 2.3em 0 0;
-}
-
-.bquote svg {
-  float: right;
-  margin-right: 0.5em;
-}
-
-/*  Components */
-.rfi-navbaroff a {
-  color: var(--bs-black);
-}
-
 /*
-.btn-close {
- color: var(--mainColour);
-} */
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 500;
+@import "bs-docs.css";
+*/
+/*bd 492 */
+.bd-navbar .navbar-toggler .bi {
+ width:1.5rem;
+ height:1.5rem
 }
 
-/* NOTE
-Placeholder svg used in the bs docs.
-Remember to update `_layouts/examples.html` too if this changes! */
-.bd-placeholder-img {
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-/* Variations */
-.bd-callout-info {
-  border-left-color: var(--bd-info) !important;
-}
-
-.bd-callout-warning {
-  border-left-color: var(--bd-warning) !important;
-}
-
-.bd-callout-danger {
-  border-left-color: var(--bd-danger) !important;
-}
-
-.bd-callout-secondary {
-  border-left-color: var(--bd-secondary) !important;
-}
-
-.bd-callout-success {
-  border-left-color: var(--bd-success) !important;
-}
-
-/* syntax */
-.description-lead,
-.highlight {
-  margin-bottom: 1rem;
-  margin-top: .5rem;
-}
-
-/* bs240 */
-code {
-  font-size: 1em;
-  /* font-size: 0.875em; */
-  color: #cc0066;
-}
-
-/* RFI-cover */
-
-
-.cover-container {
-  max-width: 72rem;
-  /* min-width: 32rem; */
-}
-
-/*1152px=72rem 1140px=71.25rem или 71.250em; - 308=832px=52rem (em) 46em;*/
-
-/* description - текст из Front Mater выводится автоматически на каждую страницу
-применяется: themes/hugo-refreshing/layouts/_default/single.html
-и в оглавлении */
-.description-lead,
-.bd-placeholder-img,
-.nav-scroller .nav-link,
-.nav-masthead .nav-link {
-  font-size: 1.125rem;
+/*bd 492 */
+.bi {
+ width:1em;
+ height:1em;
+ vertical-align:-.125em;
+ fill:currentcolor
 }
 
 /*
@@ -316,7 +90,8 @@ code {
 .nav-masthead .nav-link {
   background-color: transparent;
   border-bottom: 0.25rem solid transparent;
-  color: var(--bs-black);
+ /* color: var(--bs-black); */
+  color: interit;
   font-weight: 300;
   padding: 0.25rem 0;
 }
