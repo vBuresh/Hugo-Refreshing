@@ -18,10 +18,13 @@
         </p>
       </div>
       <div class="col-md-6">
-        <figure class="figure">
-          <img src="images/noon_top.webp" class="figure-img img-fluid rounded" alt="...">
+        <figure class="card-umage-top">
+				 {{- $img := resources.Get $image -}}
+          <img src="{{- $img.Permalink | relURL -}}" alt="Myself" width="100%">
+				
           <figcaption class="figure-caption text-end">«Полдень — прогулка у моря». Художник Елена Баева. 2022 г.</figcaption>
         </figure>
+       
       </div>
     </div>
 <!--

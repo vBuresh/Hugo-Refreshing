@@ -9,16 +9,21 @@
       {{ end }}
     </h1>
     <div class="divider"></div>
-    {{ if eq .Layout "slider" }}
-    <!-- Gallery: artGallery / artGalleryImages  -->
-    {{ partial "artSlider" . }}
-    <div class="description-lead mt-3">
-      {{ .Description | truncate 160 }}
-      {{ if .Page.Params.announce }}
-      {{ .Page.Params.announce }}
-      {{ end }}
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 ">
+
+      <div class="card-image card-image-blog p-0">
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="card-img-bottom img-fluid">
+        {{ end }}
+        {{ if .Params.video }}
+        <video loop autoplay muted playsinline class="img-title">
+          <source src="{{ .Params.video }}">
+        </video>
+        {{ end }}
+      </div>
     </div>
-    {{ else }}
+  </div>
     {{ if .Page.Params.topPageimg }}
     {{- partial "topPageimg" . -}}
     {{ end }}
@@ -28,11 +33,10 @@
       {{ .Page.Params.announce }}
       {{ end }}
     </div>
-    {{- partial "author" . -}}
     {{- partial "toc-collapse" . -}}
   </header>
-  {{ end }}
 
   {{ .Content }}
+  {{- partial "author" . -}}
 </section>
 {{ end }}
