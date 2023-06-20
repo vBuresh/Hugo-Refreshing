@@ -1,19 +1,19 @@
 <div class="col rfi-cardlists">
-  <div class="card text-bg-light border-0 h-100">
+  <div class="card border-0 h-100">
     {{- partial "topBanner.html" . -}}
     <div class="card-body">
        <a href="{{ .Permalink }}">
         <h5>
           {{ .Title }}
         </h5>
-        <h6 class="card-subtitle text-muted">
+        <h6 class="card-subtitle text-body-secondary">
           {{ if (isset .Page.Params "subtitle") }}
           {{ .Page.Params.subtitle }}&#46;
           {{ end }}
           {{ if (isset .Page.Params "summary") }}
-          {{ .Summary | truncate 60 }}
+          {{ .Summary | truncate 48 }}
           {{ else }}
-          {{ .Description | truncate 60 }}
+          {{ .Description | truncate 48 }}
           {{ end }}
         </h6>
       </a>

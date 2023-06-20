@@ -1,15 +1,16 @@
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasNavbarRFi"
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarRFi" data-bs-scroll="true" data-bs-backdrop="true"
   aria-labelledby="offcanvasNavbarRFiLabel">
 
   <div class="offcanvas-header border-bottom border-secondary">
-    {{/* <h5 class="offcanvas-title text-muted" id="offcanvasNavbarRFiLabel">
+    {{/*<h5 class="offcanvas-title text-muted" id="offcanvasNavbarRFiLabel">
       {{ i18n "theme" }}
     </h5> */}}
-
-    {{- partial "navbar/navbaroff-btn-x.html" . -}}
+    {{ partial "navbar/navbaroff-nav" . }}
+    {{ partial "navbar/navbaroff-btn-x" . }}
   </div>
   <div class="offcanvas-body pt-0">
     <!-- setup -->
-    {{/* {{- partial "tags-newPublics.html" . -}} */}}
-    {{- partial "tags-allTags.html" . -}}
+    {{ partial "tags-newPublics.html" . }}
+    {{ partial "tags-allTags" . }}
   </div>
+</div>
