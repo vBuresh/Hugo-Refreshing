@@ -7,7 +7,19 @@
     'Noto Color Emoji';
   --bs-font-monospace: 'Fira Code VF', SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
-  /*rfi Theme variables */
+/* 
+ * rfi ReFreshing Theme variables
+  --bs-link-color: #0d6efd;
+  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: #0a58ca;
+  --bs-link-hover-color-rgb: 10, 88, 202;
+*/
+  --rfi-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.95);
+  --rfi-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.5);
+  --rfi-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+  --rfi-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --rfi-cardbody-bg: rgba(var(--bs-body-color-rgb), 0.02);
   --mainColour: var(--rfi-color);
   --rfi-veryDarkBlue: #0b0b0d;
   /* --rfi-veryDarkBlackBlue1: #1d2026; 
@@ -69,11 +81,11 @@ blockquote i::before {
 /*
 @import "bs-docs.css";
 */
-/*bd 492 */
+/*bd 492
 .bd-navbar .navbar-toggler .bi {
- width:1.5rem;
+ width:2.5rem;
  height:1.5rem
-}
+} */
 
 /*bd 492 */
 .bi {
@@ -90,24 +102,23 @@ blockquote i::before {
 .nav-masthead .nav-link {
   background-color: transparent;
   border-bottom: 0.25rem solid transparent;
- /* color: var(--bs-black); */
-  color: interit;
-  font-weight: 300;
-  padding: 0.25rem 0;
+  color: var(--rfi-navbar-color);
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.25rem 0 0 0;
 }
 
 .nav-scroller .nav-link:focus,
 .nav-scroller .nav-link:hover,
 .nav-masthead .nav-link:focus,
 .nav-masthead .nav-link:hover {
-  /* border-bottom-color: rgba(255, 255, 255, .25); */
-  border-bottom-color: var(--bs-gray-400);
+ border-bottom-color: var(--rfi-navbar-disabled-color);
 }
 
 /*
 .nav-masthead .nav-link+.nav-link {
    margin-left: 1rem;
-} */
+} 
 
 .nav-scroller {
   position: relative;
@@ -115,7 +126,8 @@ blockquote i::before {
   height: 2.75rem;
   overflow-y: hidden;
 }
-
+*/
+/*
 .nav-scroller .nav {
   display: flex;
   flex-wrap: nowrap;
@@ -124,7 +136,8 @@ blockquote i::before {
   text-align: left;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-}
+} */
+
 
 .divider {
   background: var(--mainColour);
@@ -156,6 +169,7 @@ blockquote i::before {
   color: var(--rfi-aHover);
 }
 
+.nav-masthead-cmir .nav-link + .nav-link::before,
 .rfi-navbaroff .nav-link + .nav-link::before {
   content: '/';
   margin-left: 0.15rem;
@@ -165,8 +179,13 @@ blockquote i::before {
 .sidebar-floating-btn {
   position:fixed;
   right: 10px;
-  top: .75em;
+  top: .90em
+	;
   z-index: 178;
+}
+.sidebar-floating-btn svg {
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .fri-footer {
@@ -218,12 +237,13 @@ blockquote i::before {
 .fri-footer .nav a {
     color: var(--bs-gray-500);
     text-decoration: none;
- }
+}
 
- .fri-footer a:hover {
+.fri-footer a:hover {
     text-decoration: underline;
- }
+}
 
+.rfi-cardlists .card-body,
 .rfi-gallerylist .card-img,
 .rfi-gallerylist .card-img-top {
   border-top-left-radius:0;
@@ -231,5 +251,16 @@ blockquote i::before {
 }
 
 .rfi-cardlists .card-body {
-  padding-top: .4125rem;
+  padding-top: .5rem;
+	background-color: var(--rfi-cardbody-bg);
 }
+
+.rfi-cardlists .card-body a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: none;
+}
+
+.rfi-cardlists .card-body a:hover {
+  --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
