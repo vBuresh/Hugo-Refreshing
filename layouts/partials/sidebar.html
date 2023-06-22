@@ -1,5 +1,4 @@
 <!-- id="offcanvasWithBackdrop" -->
-
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
 
   <div class="offcanvas-header">
@@ -20,7 +19,7 @@
       {{ range .Site.Taxonomies.tags }}
       <div class="d-flex justify-content-between align-items-start">
         <a href="{{ .Page.Permalink }}" class="list-group-item list-group-item-action">
-          <span class="badge maincolour-bg rounded-pill float-end">{{ .Count }}</span>
+          <span class="badge rounded-pill text-bg-secondary float-end">{{ .Count }}</span>
           {{ .Page.Title }}</a>
       </div>
       {{ end }}
