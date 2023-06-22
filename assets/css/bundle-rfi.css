@@ -1,68 +1,25 @@
-/* 
-* code highlight 
-* см. строку 98 themes/refreshing/assets/css/refreshing.css
-hugo gen chromastyles --style=onedark > onedark.css
-
-pre {
-  display: block;
-  margin-top: inherit;
-  margin-bottom: 1rem;
-  overflow: auto;
-  font-size: 1em;
-}
-
-.highlight {
-  margin-bottom: 1rem;
-  margin-top: .5rem;
-}
-*/
-
-/* bs docs.css стр.6 */
-.highlight {
-  position: relative;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--bd-pre-bg);
-}
- 
-/* bs docs.css стр. 1507-1520 */
-.highlight pre {
- padding:.25rem 0 .875rem;
- margin-top:.8125rem;
- margin-bottom:0;
- overflow:overlay;
- white-space:pre;
- /*background-color:transparent;*/
- border:0
-}
-.highlight pre code {
- font-size:inherit;
- color:var(--bs-body-color);
- word-wrap:normal
-}
-/* Background  .bg { color: #abb2bf; background-color: #282c34; }*/
-/* PreWrapper 
-.chroma { color: #abb2bf; background-color: #282c34; }*/
-
-/* syntax */
-.description-lead,
-.highlight { margin-bottom: 1rem; margin-top: .5rem; }
-
-/* bs240 */
-code { font-size: 1em; /* font-size: 0.875em; */ color: #cc0066; }
-
 pre,
-.chroma {
-	color: #abb2bf; background-color: #282c34;			
- /* color: var(--bs-gray-200);
-  background-color: var(--rfi-darkHugoBlue); */
+code {
+  color: var(--bs-code-color);
+  font-size: 1rem;
+}
+
+[data-bs-theme=light] .highlight, .chroma {
+	color: #282c34;
+	background-color: var(--bs-gray-100);			
   padding: 10px;
 	font-size: 1rem;
+}
+
+[data-bs-theme=dark] .highlight .chroma {
+	color: #abb2bf;
+	background-color: #282c34;			
 }
 /* Other */
 .chroma .x {
 }
 /* Error */
-.chroma .err { color: #960050; background-color: #1e0010; }
+.chroma .err { color: var(--bs-danger); background-color: var(--bs-gray-600) }
 /* LineTableTD */
 .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */
