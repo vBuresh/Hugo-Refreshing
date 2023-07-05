@@ -1,5 +1,5 @@
 # ReFreshing
-**ReFreshing** v3.0.1-alpha2 is a theme for the Hugo with Bootstrap (v5.3). 
+**ReFreshing** v3.0.1-alpha.2 is a theme for the Hugo with Bootstrap (v5.3). 
 
 >**Внимание!** 
 >
