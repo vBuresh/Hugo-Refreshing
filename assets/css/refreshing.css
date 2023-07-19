@@ -67,7 +67,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 */
-
 blockquote {
 	background-color: var(--rfi-cardbody-bg);
   /* margin-left: 4rem; */
@@ -322,6 +321,12 @@ blockquote i::before {
  --rfi-callout-color: var(--bs-success-text-emphasis);
  --rfi-callout-bg: var(--bs-success-bg-subtle);
  --rfi-callout-border: var(--bs-success-border-subtle)
+}
+
+.rfi-callout-bquote {
+ --rfi-callout-color: var(--bs-body-color);
+ --rfi-callout-bg: var(--rfi-cardbody-bg);
+ --rfi-callout-border: var(--rfi-cardbody-bg)
 }
 
 /* RFI - ссылка на авторство */
